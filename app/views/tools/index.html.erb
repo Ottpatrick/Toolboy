@@ -18,9 +18,16 @@
 
 
       <div class="insights">
-        <strong><%= tool.daily_rate %></strong>
-        <strong><%= tool.available %></strong>
+
+        <p id= "available"> Available for you: <%= tool.available %></p>
+        <p id="rate"> <%= tool.daily_rate %> EUR PER DAY </p>
+
+        <div class= button-details>
+          <a class="btn btn-flat" href="#">Tool details</a>
+        </div>
       </div>
+
+
     </div>
 
     <% end %>
