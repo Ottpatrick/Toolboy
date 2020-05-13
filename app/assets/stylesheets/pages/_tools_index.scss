@@ -1,0 +1,75 @@
+.tools-index-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  .left {
+    width: 70%;
+    padding-left: 24px;
+
+    .card {
+      width:90%;
+      height: 250px;
+      margin-top: 12px;
+      display: flex;
+      flex-direction: row;
+      border: none;
+      border-bottom: 1px solid #DBDBD9;
+      border-top: 1px solid #DBDBD9;
+      padding: 14px;
+
+      .img {
+        width: 40%;
+        height:100%;
+        background: url("https://images.unsplash.com/photo-1518709414768-a88981a4515d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2434&q=80");
+        background-size: cover;
+        border-radius: 5px;
+      }
+
+      .info {
+        width:30%;
+        height:100%;
+
+        #details {
+          margin-left: 14px;
+          #category {
+            color: #717171;
+          }
+          #tool-name {
+            font-size: 24px;
+            color: #272729;
+          }
+        }
+      }
+
+      .insights {
+        width:30%;
+        height:100%;
+
+        #rate {
+          font-size: 24px;
+            color: #272729;
+
+        }
+      .btn-flat {
+      color: white;
+      padding: 8px 24px;
+      border-radius: 4px;
+      background: #1EDD88;
+      transition: background 0.3s ease;
+        }
+
+      .btn-flat:hover {
+      background: #1BCB7F;
+      color: white;
+      }
+      }
+    }
+  }
+
+  .right {
+    width: 30%;
+    height: 500px;
+
+  }
+}
