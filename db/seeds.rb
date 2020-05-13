@@ -8,10 +8,15 @@
 
 Tool.destroy_all
 
-Tool.create(tool_name: "Hammer", brand: "Bosch", vendor_name: "Bosch", daily_rate: "100",available: "yes", category: "Garden")
-Tool.create(tool_name: "Bohrer", brand: "Siemens", vendor_name: "Siemens", daily_rate: "200",available: "no", category: "Cleaning")
-Tool.create(tool_name: "Cleaner", brand: "BSH", vendor_name: "BSH", daily_rate: "300",available: "yes", category: "Car")
-Tool.create(tool_name: "Cutter", brand: "Aldi", vendor_name: "Aldi", daily_rate: "300",available: "no", category: "Building")
-Tool.create(tool_name: "Painter", brand: "Corona", vendor_name: "Corona", daily_rate: "100",available: "yes", category: "Building")
+Tool.create(tool_name: "Hammer", brand: "Bosch", vendor_name: "Bosch", daily_rate: "100",available: true, category: "Garden", street: "Kaiser-Wilhelm Strasse 3", city: "Starnberg", zipcode: "82319", description: "dummy text for test only, dummy text for test, someone will provide it")
+Tool.create(tool_name: "Bohrer", brand: "Siemens", vendor_name: "Siemens", daily_rate: "150",available: true, category: "Cleaning", street: "Maistraße 1", city: "München", zipcode: "80337", description: "dummy text for test only, dummy text for test, someone will provide it")
+Tool.create(tool_name: "Cleaner", brand: "BSH", vendor_name: "BSH", daily_rate: "100",available: false, category: "Car", street: "Sonnenstrasse 29", city: "München", zipcode: "80331", description: "dummy text for test only, dummy text for test, someone will provide it")
+Tool.create(tool_name: "Cutter", brand: "Aldi", vendor_name: "Aldi", daily_rate: "50",available: false, category: "Building", street: "Römerstraße 2", city: "Gilchig", zipcode: "82205", description: "dummy text for test only, dummy text for test, someone will provide it")
+Tool.create(tool_name: "Painter", brand: "Corona", vendor_name: "Corona", daily_rate: "700",available: false, category: "Building", street: "Leopoldstraße 90", city: "München", zipcode: "80802", description: "dummy text for test only, dummy text for test, someone will provide it")
+Tool.create(tool_name: "Painter", brand: "Corona", vendor_name: "Corona", daily_rate: "80",available: true, category: "Wood", street: "Bahnhofstraße", city: "Gauting", zipcode: "82131", description: "dummy text for test only, dummy text for test, someone will provide it")
+Tool.create(tool_name: "Hammer", brand: "Bosch", vendor_name: "Bosch", daily_rate: "1000",available: false, category: "Garden", street: "Hauptstr. 23", city: "Dorfen", zipcode: "84405", description: "dummy text for test only, dummy text for test, someone will provide it")
+Tool.create(tool_name: "Bohrer", brand: "Siemens", vendor_name: "Siemens", daily_rate: "20",available: true, category: "Cleaning", street: "Leopoldstraße 1", city: "München", zipcode: "80802", description: "dummy text for test only, dummy text for test, someone will provide it")
+Tool.create(tool_name: "Cleaner", brand: "BSH", vendor_name: "BSH", daily_rate: "300",available: false, category: "Car", street: "Landshuter Allee 24", city: "München", zipcode: "80637", description: "dummy text for test only, dummy text for test, someone will provide it")
+Tool.create(tool_name: "Painter", brand: "Corona", vendor_name: "Corona", daily_rate: "120",available: true, category: "Building", street: "Pasinger Bahnhofspl. 1", city: "Pasing", zipcode: "81241", description: "dummy text for test only, dummy text for test, someone will provide it")
 
 

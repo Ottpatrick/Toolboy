@@ -19,17 +19,16 @@
 
       <div class="insights">
 
-        <p id= "available"><%= tool.available %></p>
+        <% if tool.available %>
+          <p id= "available"> available </p>
+        <% else %>
+          <p id= "unavailable"> not available </p>
+        <%end %>
 
         <p id="rate"> <%= tool.daily_rate %> EUR PER DAY </p>
 
-        <div class= button-details>
-          <a class="btn btn-flat" href="#">Tool details <%= link_to "", tool_path(tool)%></a>
-        </div>
+        <%= link_to "Tool details", tool_path(tool), class:"button" %>
 
-         <div class= button-rent>
-          <a class="btn button-rent" href="#">RENT NOW</a>
-        </div>
 
       </div>
 
