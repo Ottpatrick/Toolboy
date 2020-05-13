@@ -15,5 +15,3 @@ Tool.create(tool_name: "Cutter", brand: "Aldi", vendor_name: "Aldi", daily_rate:
 Tool.create(tool_name: "Painter", brand: "Corona", vendor_name: "Corona", daily_rate: "100",available: "yes", category: "Building")
 
 
-
-
