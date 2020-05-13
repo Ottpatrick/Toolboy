@@ -1,0 +1,41 @@
+
+
+<div class="tools-index-container">
+  <div class="left">
+    <% @tools.each do |tool| %>
+
+    <div class="card">
+
+      <div class="img" ></div>
+      <div class="info">
+        <div id= "details">
+          <p id ="category"> <%= tool.category %></p>
+          <p id="tool-name"> <%= tool.tool_name %></p>
+          <p id="tool-brand"> Brand: <%= tool.brand %></p>
+          <p id="tool-vendor">Vendor: <%= tool.vendor_name %></p>
+        </div>
+      </div>
+
+
+      <div class="insights">
+
+        <p id= "available"> Available for you: <%= tool.available %></p>
+        <p id="rate"> <%= tool.daily_rate %> EUR PER DAY </p>
+
+        <div class= button-details>
+          <a class="btn btn-flat" href="#">Tool details</a>
+        </div>
+      </div>
+
+
+    </div>
+
+    <% end %>
+
+  </div>
+
+  <div class="right">
+
+  </div>
+
+</div>
