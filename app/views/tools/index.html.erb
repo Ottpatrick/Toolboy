@@ -19,12 +19,18 @@
 
       <div class="insights">
 
-        <p id= "available"> Available for you: <%= tool.available %></p>
+        <p id= "available"><%= tool.available %></p>
+
         <p id="rate"> <%= tool.daily_rate %> EUR PER DAY </p>
 
         <div class= button-details>
-          <a class="btn btn-flat" href="#">Tool details</a>
+          <a class="btn btn-flat" href="#">Tool details <%= link_to "", tool_path(tool)%></a>
         </div>
+
+         <div class= button-rent>
+          <a class="btn button-rent" href="#">RENT NOW</a>
+        </div>
+
       </div>
 
 
@@ -35,6 +41,11 @@
   </div>
 
   <div class="right">
+
+    <div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
   </div>
 
