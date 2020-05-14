@@ -132,6 +132,11 @@
   height: 500px;
   padding-right: 24px;
 
+  .id.sticky  {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  }
 
   }
 
