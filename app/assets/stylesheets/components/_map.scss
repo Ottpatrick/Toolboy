@@ -1,3 +1,17 @@
+
+.index-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  .left {
+  width:70%;
+  }
+  .right {
+  width:30%;
+  }
+
+}
 .mapboxgl-popup {
   max-width: 200px;
 }
