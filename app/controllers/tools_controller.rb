@@ -15,4 +15,10 @@ class ToolsController < ApplicationController
       }
     end
   end
+
+  def new
+    @tool = Tool.new
+  end
+
 end
+
