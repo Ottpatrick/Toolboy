@@ -4,62 +4,52 @@
     <h2>Starts at only <em><%= @tool.daily_rate %>€</em> per day</h2>
   </div>
 </div>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12 col-md-6">
-      <table class="table">
-        <tbody>
-          <thead>
-            <th>Category</th>
-            <th>Brand</th>
-            <th>Available</th>
-          </thead>
-            <tr>
-              <td><%= @tool.category %></td>
-              <td><%= @tool.brand %></td>
-              <td><%= @tool.available %></td>
-            </tr>
-        </tbody>
-      </table>
-    <li>Location: <%= @tool.vendor_name %>
-                <%= @tool.street %>
-                <%= @tool.zipcode %>
-                <%= @tool.city %> </li>
-
-    <div class="calculation">
-      <div class="date-start">
-        <p>Start Date:</p>
-        <input type="datetime-local" value="2017-06-13T13:00">
-      </div>
-      <div class="date-end">
-        <p>End Date:</p>
-        <input type="datetime-local" value="2017-06-13T13:00">
-      </div>
-    </div>
-    <h2>Price:</h2>
-
-
-
+<div class="show-page-container">
+  <div class="left">
+    <table class="table">
+          <tbody>
+            <thead>
+              <th>Category</th>
+              <th>Brand</th>
+              <th>Available</th>
+            </thead>
+              <tr>
+                <td><%= @tool.category %></td>
+                <td><%= @tool.brand %></td>
+                <td><%= @tool.available %></td>
+              </tr>
+          </tbody>
+        </table>
+        <h2> Description: </h2>
+    <p> <%= @tool.description %> </p>
+    <br>
 
   </div>
 
+  <div class="right">
+     <div class="form-wrapper" style="width: 400px; margin: 32px;">
+      <%= simple_form_for [@tool, @rent] do |f| %>
+      <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.button :submit, "Go", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+</div>
+</div>
 
+<div>
+<h2> Description: </h2>
+    <p> <%= @tool.description %> </p>
+    <br>
 
+    <h2>Price:</h2>
 
+    <h2>Review:</h2>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+     <li>Location: <%= @tool.vendor_name %>
+                  <%= @tool.street %>
+                  <%= @tool.zipcode %>
+                  <%= @tool.city %> </li>
 </div>
 
 
