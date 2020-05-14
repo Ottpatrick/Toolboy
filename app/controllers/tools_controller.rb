@@ -20,5 +20,17 @@ class ToolsController < ApplicationController
     @tool = Tool.new
   end
 
-end
+   def create
+    @tool = Tool.new(tool_params)
+      if @tool.save
+        redirect_to tool_path(@tool)
+      else
+        render 'new'
+      end
+  end
 
+  def tool_params
+    params.require(:tool).permit(:tool_name, :brand, :vendor_name, :description, :daily_rate, :street, :ciy, :zipcode, :category, :available)
+  end
+
+end
