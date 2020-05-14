@@ -9,11 +9,10 @@
     <h2> Search your tool by category</h2>
 
     <div class="categories">
-      <a class="btn btn-ghost" >Garden</a>
-      <a class="btn btn-ghost" >Household</a>
-      <a class="btn btn-ghost" >Construction</a>
-      <a class="btn btn-ghost" >Cleaning</a>
-      <a class="btn btn-ghost" >Car</a>
+      <% @categories.each do |category|%>
+        <%= link_to category, tools_path(category: category), class: "btn btn-ghost" %>
+      <% end %>
+       <%= link_to "All", tools_path, class: "btn btn-ghost" %>
     </div>
   </div>
 
