@@ -2,6 +2,8 @@ class ToolsController < ApplicationController
 
   def show
     @tool = Tool.find(params[:id])
+    @rent = Rent.new
+
   end
 
   def index
@@ -38,5 +40,4 @@ class ToolsController < ApplicationController
   def tool_params
     params.require(:tool).permit(:tool_name, :brand, :vendor_name, :description, :daily_rate, :street, :ciy, :zipcode, :category, :available, :photo)
   end
-
 end
