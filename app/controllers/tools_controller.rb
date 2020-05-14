@@ -5,7 +5,13 @@ class ToolsController < ApplicationController
   end
 
   def index
-    @tools = Tool.geocoded
+    @categories = ["Garden", "Household", "Car", "Building"]
+
+    if params[:category].present?
+      @tools = Tool.geocoded.where(category: params[:category])
+    else
+      @tools = Tool.geocoded
+    end
 
     @markers = @tools.map do |tool|
       {
