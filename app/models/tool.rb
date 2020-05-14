@@ -1,6 +1,7 @@
 class Tool < ApplicationRecord
   has_many :rents
   has_many :users, through: :rents
+  has_one_attached :photo
 
   geocoded_by :address
   # after_validation :geocode, if: :will_save_change_to_address?

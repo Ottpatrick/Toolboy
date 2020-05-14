@@ -50,54 +50,63 @@
         align-items: flex-end;
 
         #available {
-        color: #1CCB7F;
+          color: #9BC464;
         }
 
         #unavailable {
-        color: #FD0F15;
+          color: #FD0F15;
         }
 
         #rate {
           font-size: 20px;
-            color: #272729;
+          color: #272729;
 
         }
         #button_link:hover {
           text-decoration: none;
         }
 
-      .button {
-      color: white;
-      padding: 8px 24px;
-      border-radius: 4px;
-      background: #1EDD88;
-      transition: background 0.3s ease;
-      text-decoration: none;
-      align-items: flex-end;
-      position: relative;
-      bottom: -90px;
-      right: -15px;
-        }
-
-      .button:hover {
-      background: #1BCB7F;
-      color: white;
-      text-decoration: none;
-      }
+        .stupid-button {
+          height:80%;
+          display: flex;
+          align-items: flex-end;
 
 
 
-      }
+          .button {
+            color: white;
+            padding: 8px 24px;
+            border-radius: 4px;
+            background: #9BC464;
+            transition: background 0.3s ease;
+            text-decoration: none;
+
 
     }
 
+    .button:hover {
+      background: #9BC464;
+      color: white;
+      text-decoration: none;
+    }
 
   }
 
-  .right {
-    width: 30%;
-    height: 500px;
-    padding-right: 24px;
+
+}
+
+}
+
+
+}
+
+.right {
+  width: 30%;
+  height: 500px;
+  padding-right: 24px;
+
 
   }
+
+
 }
