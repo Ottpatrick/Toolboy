@@ -1,12 +1,14 @@
 
-
 <div class="tools-index-container">
   <div class="left">
     <% @tools.each do |tool| %>
 
     <div class="card">
 
-      <div class="img" ></div>
+      <div class="img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path tool.photo.key, height: 300, width: 400, crop: :fill %>')">
+
+      </div>
+
       <div class="info">
         <div id= "details">
           <p id ="category"> <%= tool.category %></p>
@@ -19,12 +21,18 @@
 
       <div class="insights">
 
-        <p id= "available"> Available for you: <%= tool.available %></p>
+        <% if tool.available %>
+          <p id= "available"> available </p>
+        <% else %>
+          <p id= "unavailable"> not available </p>
+        <%end %>
+
         <p id="rate"> <%= tool.daily_rate %> EUR PER DAY </p>
 
-        <div class= button-details>
-          <a class="btn btn-flat" href="#">Tool details</a>
+        <div class= "stupid-button">
+          <%= link_to "Tool details", tool_path(tool), class:"button" %>
         </div>
+
       </div>
 
 
@@ -35,6 +43,11 @@
   </div>
 
   <div class="right">
+
+    <div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
   </div>
 
